@@ -1,3 +1,5 @@
+// /ModelDB/Mostrans/General/ProductDB.ts
+
 import SequelizePkg from "sequelize";
 import { MostransPG } from "../../../Database/MostransPGDB.ts";
 

@@ -11,33 +11,43 @@ export const ActivityModel = sequelize.define("activities", {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
+    field: "idupdate",
   },
   IDProduct: {
     type: DataTypes.INTEGER,
+    field: "idproduct",
     references: {
-      model: "products", // Menyambungkan ke tabel products
+      model: "products", 
       key: "IDProduct",
     },
   },
   IDOperator: {
     type: DataTypes.INTEGER,
+    field: "idoperator",
     references: {
-      model: "users", // Menyambungkan ke tabel users (IDOperator)
+      model: "users",  
       key: "IDOperator",
     },
   },
-  Action: DataTypes.STRING,
-  Notes: DataTypes.TEXT,
+  Action: {
+    type: DataTypes.STRING,
+    field: "action",
+  },
+  Notes:  {
+    type: DataTypes.TEXT,
+    field: "action",
+  },
   UpdateDate: {
     type: DataTypes.DATE,
-    defaultValue: Sequelize.NOW, // Default timestamp saat update
+    field: "updatedate",
+    defaultValue: Sequelize.NOW,
   },
   UpdateTime: {
     type: DataTypes.DATE,
+    field: "updatetime",
     defaultValue: Sequelize.NOW,
   },
 }, {
   timestamps: false,
   freezeTableName: true,
 });
-
