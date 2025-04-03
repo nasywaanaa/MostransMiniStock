@@ -1,17 +1,24 @@
 import * as UserResolver from "./Mostrans/user/UserResolver.ts";
 import * as LandingResolver from "./Mostrans/General/LandingResolver.ts";
-import ProductResolver from "./Mostrans/General/product.ts";
+import * as ProductResolver from "./Mostrans/General/product.ts";
+import * as ActivityLogResolver from "./Mostrans/General/activitylog.ts";
+
 
 export type Resolver = {
   Query?: object;
   Mutation?: object;
 };
 
-const listResolver = [UserResolver, LandingResolver, ProductResolver]; 
+const listResolver = [UserResolver, LandingResolver, ProductResolver, ActivityLogResolver]; 
 
 const resolvers = {
-  Query: {},
-  Mutation: {},
+  Query: {
+    ...ProductResolver.Query,
+    ...ActivityLogResolver.Query,
+  },
+  Mutation: {
+    // Add any mutation resolvers here if needed
+  },
 };
 
 listResolver.forEach((s) => {

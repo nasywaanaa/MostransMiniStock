@@ -1,20 +1,25 @@
-let _type = ``;
-_type += ` type SliderResponse {
-    id: String,
-    content: String,
-    sender: String,
-    segment: String,
-    attachment: String,
-    created_at: String,
-    updated_at: String,
-}
-`;
-export const types = _type;
-let _inputs = ``;
-export const inputs = _inputs;
+// /Schema/Mostrans/General/activitylog.ts
 
-export const queries = `
-    getSlider: [SliderResponse]
+import { gql } from "apollo-server-express";
+
+export const types = `
+  type Activity {
+    IDUpdate: Int
+    IDProduct: Int
+    IDOperator: Int
+    Action: String
+    Notes: String
+    UpdateDate: String
+    UpdateTime: String
+  }
+
+  type Mutation {
+    logProductActivity(IDProduct: Int!, IDOperator: Int!, action: String!, notes: String!): Activity
+  }
 `;
-let _mutation = ``;
-export const mutations = _mutation;
+
+export const queries = ``; // No queries for now
+
+export const mutations = `
+  logProductActivity(IDProduct: Int!, IDOperator: Int!, action: String!, notes: String!): Activity
+`;
