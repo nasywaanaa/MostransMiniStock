@@ -1,0 +1,98 @@
+
+.history-title {
+  text-align: center;
+  color: #189153;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.history-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.history-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 1rem;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #189153;
+  padding: 1rem 0;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.status-icon {
+  height: 20px;
+  margin-top: 4px;
+}
+
+.history-info p {
+  margin: 0.25rem 0 0 0;
+  color: #189153;
+  font-weight: 500;
+}
+
+.detail-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: #189153;
+  white-space: nowrap;
+}
+
+.detail-link:hover {
+  text-decoration: underline;
+}
+
+.history-info strong {
+  color: #189153;
+  font-weight: 700;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  font-weight: 600;
+  color: #189153;
+}
+
+.pagination button {
+  background-color: white;
+  border: 2px solid #189153;
+  color: #189153;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

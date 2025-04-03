@@ -1,0 +1,63 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* tinggi minimal 100% layar */
+  }
+  
+  .hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #189153;
+  }
+  
+  .green {
+    color: #189153;
+  }
+
+  .logoh1 {
+    height: 50px;
+    width: auto;
+  }
+  
+  .light {
+    color: #c1cfc1;
+  }
+  
+  .hero p {
+    margin-top: 2rem;
+    color: #555;
+    font-size: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #189153;
+  }
+  
+  .cta {
+    margin-top: 2rem;
+    font-size: 16px;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #189153;
+    background: none;
+    color: #189153;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .cta:hover {
+    background-color: #189153;
+    color: white;
+  }
+  

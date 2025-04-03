@@ -1,0 +1,77 @@
+.confirm-identity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .step-bar-image {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .step-bar-image img {
+    height: 50px;
+  }
+  
+  .confirm-card {
+    background: linear-gradient(135deg, #eafbf2, #aab5cd 48%, #e3fce7);
+    border: 3px solid #189153;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 400px;
+    text-align: center;
+    color: #114c24;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .confirm-card h2 {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .confirm-card label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .confirm-card input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 16px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .cancel {
+    background-color: #fd7e3c;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .next {
+    background-color: #1e2b57;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  

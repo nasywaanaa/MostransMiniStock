@@ -1,0 +1,332 @@
+/* src/pages/ProductDetailPage.css */
+
+.product-detail-container {
+    padding: 2rem;
+  }
+  
+  .back-link a {
+    color: #189153;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .step-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    gap: 1rem;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .step img {
+    height: 40px;
+  }
+  
+  .step-label {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .step-label.active {
+    color: #189153;
+  }
+  
+  .line {
+    width: 50px;
+    height: 2px;
+    background-color: #ccc;
+  }
+  
+  .product-card {
+    background: linear-gradient(-135deg, #28a745 0%, #BDC8C6 50%, #c4f3e2 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    color: #114c24;
+    font-family: 'Poppins', sans-serif;
+    margin: 2rem auto;
+    box-shadow: 0 0 30px rgba(24, 145, 83, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  
+    /* important for background masking */
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    z-index: 1;
+  }
+  
+  /* Gradasi hijau luar dengan efek glowing */
+  .product-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 3px;
+    background: linear-gradient(135deg, #1b9b64, #aef2cf);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+  }
+  
+  .row:last-child {
+    border-bottom: none;
+  }
+  
+  .row p {
+    margin: 0;
+    text-align: right;
+    color: #FFF;
+  }
+  
+  .row strong {
+    color: #FFF;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .cancel {
+    background-color: #ff7f3f;
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .next {
+    background-color: #189153;
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .identity-card {
+    background: linear-gradient(-135deg, #28a745 0%, #BDC8C6 50%, #c4f3e2 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    color: #114c24;
+    font-family: 'Poppins', sans-serif;
+    margin: 2rem auto;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 0 30px rgba(24, 145, 83, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+
+  .identity-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 3px;
+    background: linear-gradient(135deg, #1b9b64, #aef2cf);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+  .identity-card h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .identity-card label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-align: left;
+  }
+  
+  .identity-card input {
+    align-items: center;
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  .identity-card .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .identity-card .cancel {
+    background-color: #fd7e14;
+    color: white;
+    padding: 0.6rem 3.2rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .identity-card .next.navy {
+    background-color: #189153;
+    color: white;
+    padding: 0.6rem 3.2rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    flex-direction: column;
+  }
+  
+  .identity-form {
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .identity-card select {
+    -webkit-appearance: none; /* Untuk Safari/Chrome */
+    -moz-appearance: none;    /* Untuk Firefox */
+    appearance: none;
+  
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 0.7rem 2.5rem 0.7rem 1rem;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: url('../assets/arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content.stock-updated {
+    background: linear-gradient(-135deg, #28a745 0%, #BDC8C6 50%, #c4f3e2 100%);
+    border: 3px solid #7ddca5;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 600px;
+    max-width: 90%;
+    position: relative;
+    color: #114c24;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .modal-content.stock-updated h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 24px;
+  }
+  
+  .modal-content.stock-updated .success-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* atau "cover" */
+    display: block;
+    margin: 0 auto; /* center jika perlu */
+  }
+  
+
+  .check-icon {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #28a745;
+  }
+  
+  .modal-content.stock-updated table {
+    width: 100%;
+    border-spacing: 0 0.8rem;
+  }
+  
+  .modal-content.stock-updated td {
+    padding: 0.4rem 0.8rem;
+    vertical-align: top;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    font-size: 24px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  

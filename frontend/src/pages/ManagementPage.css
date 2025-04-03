@@ -1,0 +1,106 @@
+.management-title {
+  text-align: center;
+  font-size: 64px;
+  color: #189153;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.management-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border: 1px solid #189153;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  font-family: "Poppins";
+  outline: none;
+}
+
+.search-bar button {
+  background: #189153;
+  border: none;
+  padding: 0 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-icon {
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+  .inventory-table th {
+    background-color: #189153;
+    color: white;
+    padding: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .inventory-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: center;
+    color: #189153;
+  }
+  
+  .btn-pilih {
+    background: linear-gradient(135deg, #189153, #54d59d);
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .btn-pilih:hover {
+    background: #157d45;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .pagination button {
+    padding: 0.4rem 1rem;
+    border: 1px solid #189153;
+    border-radius: 6px;
+    background-color: white;
+    color: #189153;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .pagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  
