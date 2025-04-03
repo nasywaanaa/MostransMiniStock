@@ -6,7 +6,10 @@ import express from "npm:express";
 import http from "http";
 import { config } from "https://deno.land/x/dotenv@v3.2.2/mod.ts";
 import cors from "cors";
+// import { setupAssociations } from "./ModelDB/Mostrans/user/UserDB.ts";
 
+// Call the setupAssociations function to initialize the relationships
+// setupAssociations();
 // Load ENV
 const env = config();
 

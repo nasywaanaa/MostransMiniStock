@@ -4343,6 +4343,7 @@
         "npm:https@1",
         "npm:nodemon@^1.18.10",
         "npm:pg@^8.7.1",
+        "npm:react-router-dom@6.22.0",
         "npm:sequelize@^4.39.0",
         "npm:ts-node@^10.9.2",
         "npm:typescript@^5.5.2"

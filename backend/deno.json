@@ -1,6 +1,7 @@
 {
+  "importMap": "import_map.json",
   "tasks": {
-    "dev": "deno run --allow-all src/index.ts",
+    "dev": "deno run -A --unstable src/index.ts",
     "build": "deno compile --output app --allow-all --no-check src/index.ts",
     "start": "./app"
   },
