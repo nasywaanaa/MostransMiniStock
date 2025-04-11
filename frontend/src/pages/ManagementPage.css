@@ -1,3 +1,14 @@
+/* Layout dasar agar footer tetap di bawah */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.management-container {
+  flex: 1;
+}
+
 .management-title {
   text-align: center;
   font-size: 64px;
