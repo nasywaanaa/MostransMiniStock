@@ -2,6 +2,7 @@ import * as ResponseSchema from "./Mostrans/Response/ResponseSchema.ts";
 import * as UserSchema from "./Mostrans/user/UserSchema.ts";
 import * as LandingSchema from "./Mostrans/General/LandingSchema.ts";
 import * as ProductSchema from "./Mostrans/General/product.ts";
+import * as ActivityLogSchema from "./Mostrans/General/activitylog.ts";
 
 import { gql } from "apollo-server-express";
 
@@ -10,7 +11,7 @@ const inputs: string[] = [];
 const queries: string[] = [];
 const mutations: string[] = [];
 
-const schemas = [UserSchema, ResponseSchema, LandingSchema, ProductSchema];
+const schemas = [UserSchema, ResponseSchema, LandingSchema, ProductSchema, ActivityLogSchema];
 
 schemas.forEach((s) => {
   if (s.types) types.push(s.types as string);

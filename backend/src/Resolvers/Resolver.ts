@@ -1,8 +1,7 @@
 import * as UserResolver from "./Mostrans/user/UserResolver.ts";
 import * as LandingResolver from "./Mostrans/General/LandingResolver.ts";
-import * as ProductResolver from "./Mostrans/General/product.ts";
-import * as ActivityLogResolver from "./Mostrans/General/activitylog.ts";
-
+import ProductResolver from "./Mostrans/General/product.ts";
+import ActivityLogResolver from "./Mostrans/General/activitylog.ts";
 
 export type Resolver = {
   Query?: object;
@@ -17,7 +16,8 @@ const resolvers = {
     ...ActivityLogResolver.Query,
   },
   Mutation: {
-    // Add any mutation resolvers here if needed
+    ...ProductResolver.Mutation,
+    ...ActivityLogResolver.Mutation,
   },
 };
 

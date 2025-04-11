@@ -5,28 +5,51 @@ import search from "../assets/search.png";
 
 import "./SearchPage.css";
 
-const dummyData = {
-  1: {
-    id: "1",
-    name: "Syringe 10ml",
-    category: "Alat Medis",
-    description: "Suntikan steril ukuran 10ml untuk injeksi intravena.",
-    stock: 120,
-    unit: "pieces",
-    status: "Normal",
-    min: 50,
-    max: 300,
-  },
-  // Tambah data dummy lainnya di sini jika perlu
-};
-
 const SearchPage = () => {
   const [inputId, setInputId] = useState("");
   const [product, setProduct] = useState<any | null>(null);
+  const [notFound, setNotFound] = useState(false);
 
-  const handleSearch = () => {
-    const result = dummyData[inputId];
-    setProduct(result || null);
+  const handleSearch = async () => {
+    setNotFound(false);
+    setProduct(null);
+
+    if (!inputId) return;
+
+    try {
+      const response = await fetch("http://localhost:4000/graphql", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          query: `
+            query {
+              getProductById(IDProduct: ${inputId}) {
+                IDProduct
+                ProductName
+                ProductCategory
+                ProductDescription
+                TotalStock
+                Unit
+                MinimumCapacity
+                MaximumCapacity
+              }
+            }
+          `,
+        }),
+      });
+
+      const json = await response.json();
+      const result = json.data.getProductById;
+
+      if (result) {
+        setProduct(result);
+      } else {
+        setNotFound(true);
+      }
+    } catch (err) {
+      console.error("Search failed:", err);
+      setNotFound(true);
+    }
   };
 
   return (
@@ -47,44 +70,20 @@ const SearchPage = () => {
             </button>
           </div>
 
+          {notFound && (
+            <p style={{ color: "red", marginTop: "1rem" }}>ID Product tidak ditemukan.</p>
+          )}
+
           {product && (
             <div className="result-box styled-result">
-              <div>
-                <label>ID Product</label>
-                <p>{product.id}</p>
-              </div>
-              <div>
-                <label>Product Name</label>
-                <p>{product.name}</p>
-              </div>
-              <div>
-                <label>Product Category</label>
-                <p>{product.category}</p>
-              </div>
-              <div>
-                <label>Product Description</label>
-                <p>{product.description}</p>
-              </div>
-              <div>
-                <label>Total Stock</label>
-                <p>{product.stock}</p>
-              </div>
-              <div>
-                <label>Unit</label>
-                <p>{product.unit}</p>
-              </div>
-              <div>
-                <label>Status</label>
-                <p>{product.status}</p>
-              </div>
-              <div>
-                <label>Minimum Capacity</label>
-                <p>{product.min}</p>
-              </div>
-              <div>
-                <label>Maximum Capacity</label>
-                <p>{product.max}</p>
-              </div>
+              <div><label>ID Product</label><p>{product.IDProduct}</p></div>
+              <div><label>Product Name</label><p>{product.ProductName}</p></div>
+              <div><label>Product Category</label><p>{product.ProductCategory}</p></div>
+              <div><label>Product Description</label><p>{product.ProductDescription}</p></div>
+              <div><label>Total Stock</label><p>{product.TotalStock}</p></div>
+              <div><label>Unit</label><p>{product.Unit}</p></div>
+              <div><label>Minimum Capacity</label><p>{product.MinimumCapacity}</p></div>
+              <div><label>Maximum Capacity</label><p>{product.MaximumCapacity}</p></div>
             </div>
           )}
         </div>

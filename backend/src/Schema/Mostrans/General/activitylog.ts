@@ -1,4 +1,6 @@
-export const activityLogSchema = `
+// Schema/Mostrans/General/activityLog.ts
+
+export const types = `
   type Activity {
     IDUpdate: Int
     IDProduct: Int
@@ -9,15 +11,16 @@ export const activityLogSchema = `
     UpdateTime: String
   }
 
-  type Query {
-    historyLog: [Activity]
-    getSlider: [Slider]
-  }
-
   type Slider {
     id: Int
     name: String
     imageUrl: String
-    # Add other fields as necessary
   }
 `;
+
+export const queries = `
+  historyLog: [Activity]
+  getSlider: [Slider]
+`;
+
+export const mutations = ``; // Kosongkan jika belum ada mutation

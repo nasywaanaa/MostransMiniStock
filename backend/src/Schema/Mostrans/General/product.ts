@@ -6,10 +6,8 @@ export const types = `
     ProductDescription: String
     TotalStock: Int
     Unit: String
-    Status: String
     MinimumCapacity: Int
     MaximumCapacity: Int
-    Description: String
   }
 `;
 
