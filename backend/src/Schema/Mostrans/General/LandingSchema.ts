@@ -1,5 +1,3 @@
-// /Schema/Mostrans/General/activitylog.ts
-
 import { gql } from "apollo-server-express";
 
 export const types = `
@@ -18,7 +16,7 @@ export const types = `
   }
 `;
 
-export const queries = ``; // No queries for now
+export const queries = ``; 
 
 export const mutations = `
   logProductActivity(IDProduct: Int!, IDOperator: Int!, action: String!, notes: String!): Activity

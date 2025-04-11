@@ -13,7 +13,7 @@ const ManagementPage = () => {
   const [searchResult, setSearchResult] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchId, setSearchId] = useState("");
-  const [notFound, setNotFound] = useState(false); // 🆕
+  const [notFound, setNotFound] = useState(false);
 
   const navigate = useNavigate();
 

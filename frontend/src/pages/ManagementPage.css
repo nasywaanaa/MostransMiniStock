@@ -1,4 +1,3 @@
-/* Layout dasar agar footer tetap di bawah */
 .page-container {
   display: flex;
   flex-direction: column;

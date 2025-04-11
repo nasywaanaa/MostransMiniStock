@@ -1,5 +1,3 @@
-// Schema/Mostrans/General/activityLog.ts
-
 export const types = `
   type Activity {
     IDUpdate: Int
@@ -23,4 +21,4 @@ export const queries = `
   getSlider: [Slider]
 `;
 
-export const mutations = ``; // Kosongkan jika belum ada mutation
+export const mutations = ``;

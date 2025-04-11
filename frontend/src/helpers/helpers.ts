@@ -3,17 +3,14 @@ import { TokenResponse, UserLoginResponse } from "../lib/interface.tsx";
 const backendURL = import.meta.env.VITE_REACT_APP_BACKEND_URL;
 
 export const unixToDate = (unix: string) => {
-  // Convert the unix timestamp (as a string) to a Date object
   const date = new Date(Number(unix));
 
-  // Options for the desired format
   const options: Intl.DateTimeFormatOptions = {
     day: "numeric",
     month: "long",
     year: "numeric",
   };
 
-  // Format the date directly from the Date object
   const formattedDate = date.toLocaleDateString("en-GB", options);
 
   return formattedDate;

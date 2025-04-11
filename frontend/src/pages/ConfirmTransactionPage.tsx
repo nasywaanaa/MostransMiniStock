@@ -7,7 +7,7 @@ import step1active from "../assets/checkdetailsactive.png";
 import step2active from "../assets/confirmidentityactive.png";
 import step3active from "../assets/confirmchangesactive.png";
 
-import "./ProductDetailPage.css"; // styling masih digunakan
+import "./ProductDetailPage.css"; 
 
 const ConfirmTransactionPage = () => {
   const navigate = useNavigate();
@@ -81,7 +81,6 @@ const ConfirmTransactionPage = () => {
           <a onClick={() => navigate(-1)}>&larr; Update Inventory</a>
         </div>
 
-        {/* Step Bar */}
         <div className="step-bar">
           <div className="step">
             <img src={step1active} alt="Check Document" />
@@ -99,7 +98,6 @@ const ConfirmTransactionPage = () => {
           </div>
         </div>
 
-        {/* Card */}
         <div className="identity-card">
           <h2>Confirm Transaction</h2>
 

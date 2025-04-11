@@ -1,5 +1,3 @@
-// /DataSource/Mostrans/General/ActivityDS.ts
-
 import { ActivityModel } from "../../../ModelDB/Mostrans/General/ActivityDB.ts";
 import { ProductModel } from "../../../ModelDB/Mostrans/General/ProductDB.ts";
 import { OperatorModel } from "../../../ModelDB/Mostrans/General/OperatorDB.ts";
@@ -9,7 +7,7 @@ export const ActivityDataSource = {
     const product = await ProductModel.findByPk(IDProduct);
     const operator = await OperatorModel.findByPk(IDOperator);
 
-    if (!product || !operator) return null; // Ensure the product and operator exist
+    if (!product || !operator) return null;
 
     const newActivity = await ActivityModel.create({
       IDUpdate,

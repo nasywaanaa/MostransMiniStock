@@ -41,7 +41,7 @@ export const ProductDataSource = {
       updatedStock += quantity;
     } else if (action === "DELETE") {
       updatedStock -= quantity;
-      if (updatedStock < 0) updatedStock = 0; // prevent negative stock
+      if (updatedStock < 0) updatedStock = 0; 
     }
   
     await product.update({ TotalStock: updatedStock });

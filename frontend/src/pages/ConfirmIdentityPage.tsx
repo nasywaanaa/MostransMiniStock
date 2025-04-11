@@ -1,4 +1,3 @@
-// src/pages/ConfirmIdentityPage.tsx
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
@@ -8,7 +7,7 @@ import step1active from "../assets/checkdetailsactive.png";
 import step2active from "../assets/confirmidentityactive.png";
 import step3inactive from "../assets/confirmchangesinactive.png";
 
-import "./ProductDetailPage.css"; // shared CSS
+import "./ProductDetailPage.css"; 
 
 const ConfirmIdentityPage = () => {
   const location = useLocation();
@@ -23,12 +22,10 @@ const ConfirmIdentityPage = () => {
   return (
     <div className="page-container">
       <main className="product-detail-container">
-        {/* Kembali */}
         <div className="back-link">
           <a onClick={() => navigate(-1)}>&larr; Update Inventory</a>
         </div>
 
-        {/* Step Bar */}
         <div className="step-bar">
           <div className="step">
             <img src={step1active} alt="Check Details" />
@@ -46,7 +43,6 @@ const ConfirmIdentityPage = () => {
           </div>
         </div>
 
-        {/* Identity Box */}
         <div className="centered-container">
         <div className="identity-card">
             <h2>Confirm Identity</h2>

@@ -67,7 +67,6 @@ const ProductDetailPage = () => {
           <a onClick={() => navigate(-1)}>&larr; Update Inventory</a>
         </div>
 
-        {/* Step Bar */}
         <div className="step-bar">
           <div className="step">
             <img src={step1active} alt="Check Details" />
@@ -85,7 +84,6 @@ const ProductDetailPage = () => {
           </div>
         </div>
 
-        {/* Product Detail Card */}
         <div className="product-card">
           <div className="row"><strong>ID Product</strong><p>{product.IDProduct}</p></div>
           <div className="row"><strong>Product Name</strong><p>{product.ProductName}</p></div>

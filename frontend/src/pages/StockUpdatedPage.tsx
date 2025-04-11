@@ -20,7 +20,6 @@ const StockUpdatedPage = () => {
     );
   }
 
-  // Format tanggal & jam lokal
   const now = new Date();
   const updateDate = now.toLocaleDateString("id-ID", {
     day: "2-digit",
@@ -54,7 +53,7 @@ const StockUpdatedPage = () => {
             </tr>
             <tr><td><strong>Update Date</strong></td><td>{updateDate}</td></tr>
             <tr><td><strong>Update Time</strong></td><td>{updateTime} WIB</td></tr>
-            <tr><td><strong>Operator</strong></td><td>Nasywaa Anggun Athiefah</td></tr> {/* bisa diganti dari login */}
+            <tr><td><strong>Operator</strong></td><td>Nasywaa Anggun Athiefah</td></tr> 
             <tr><td><strong>Quantity</strong></td><td>{data.quantity} {data.Unit?.toLowerCase() || "unit"}</td></tr>
             <tr><td><strong>Total Stock Sekarang</strong></td><td>{data.TotalStock} {data.Unit?.toLowerCase() || "unit"}</td></tr>
           </tbody>

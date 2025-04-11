@@ -12,7 +12,6 @@ const initializeToken = async () => {
   }
 };
 
-// Helper function to check if token is initialized
 const ensureTokenInitialized = async () => {
   if (!accessToken) {
     await initializeToken();
@@ -31,7 +30,7 @@ export const handleSubmitTicket = async (
   onClose: () => void
 ) => {
   const url = backendURL + "/graphql";
-  await ensureTokenInitialized(); // Ensure token is initialized before proceeding
+  await ensureTokenInitialized();
 
   const query = `
       mutation InsertMasterTicket($input: TicketInput) {
@@ -105,7 +104,7 @@ const handleSubmitFile = async (
   selectedFiles: File[] | null,
   attachmentNote: string
 ) => {
-  await ensureTokenInitialized(); // Ensure token is initialized before proceeding
+  await ensureTokenInitialized(); 
 
   if (!selectedFiles || selectedFiles.length === 0) {
     alert("Please select at least one file before submitting.");
@@ -115,7 +114,6 @@ const handleSubmitFile = async (
   const driveId =
     "b!GZq-AtWRIEGh_639YVCTsoHDteAt-hdKjk8YpjLYXDdhms40ICD5TYON0EHYSBhg";
 
-  // Loop through all selected files
   for (const selectedFile of selectedFiles) {
     const url = `https://graph.microsoft.com/v1.0/drives/${driveId}/root:/${selectedFile.name}:/content`;
 
@@ -156,7 +154,6 @@ const handleSubmitFile = async (
         localStorage.setItem("fileLink", fileLink);
         globalThis.open(fileLink, "_blank");
 
-        // GraphQL mutation to save attachment info
         const graphqlQuery = {
           query: `
             mutation InsertAttachment($input: AttachmentInput) {
@@ -180,7 +177,6 @@ const handleSubmitFile = async (
           },
         };
 
-        // Hit the GraphQL API with the mutation
         const graphqlResponse = await fetch(backendURL + "/graphql", {
           method: "POST",
           headers: {

@@ -1,7 +1,7 @@
 .page-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* tinggi minimal 100% layar */
+    min-height: 100vh; 
   }
   
   .hero {

@@ -1,9 +1,7 @@
-// /Resolvers/Mostrans/General/activitylog.ts
-
 import { ActivityDataSource } from "../../../DataSource/Mostrans/General/ActivityDS.ts";
 
 export default {
-  Query: {}, // ← tambahkan ini
+  Query: {}, 
   Mutation: {
     logProductActivity: async (
       _: any,

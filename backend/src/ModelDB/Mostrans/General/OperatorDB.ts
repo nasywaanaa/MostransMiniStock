@@ -1,5 +1,3 @@
-// /ModelDB/Mostrans/user/UserDB.ts
-
 import SequelizePkg from "sequelize";
 import { MostransPG } from "../../../Database/MostransPGDB.ts";
 
@@ -19,6 +17,6 @@ export const OperatorModel = sequelize.define("users", {
     field: "operatorname",
   },
 }, {
-  timestamps: false, // Tidak ada timestamp untuk pembuatan dan pembaruan (kecuali diperlukan)
-  freezeTableName: true, // Menjaga nama tabel tetap 'users' tanpa penambahan otomatis 's'
+  timestamps: false, 
+  freezeTableName: true,
 });
